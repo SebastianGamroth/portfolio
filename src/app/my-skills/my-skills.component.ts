@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-skills.component.scss']
 })
 export class MySkillsComponent implements OnInit {
+  mySkillsName = ['Java script', 'Angular', 'HTML / CSS', 'SCRUM', 'Git', 'Design Thinking', 'Rest API', 'Test automation', 'Databases'];
+  mySkillsPics = ['javaScript', 'angular', 'htmlCss', 'scrum', 'git', 'designThinkin', 'restApi', 'testAutomation', 'databases'];
 
   constructor() { }
 

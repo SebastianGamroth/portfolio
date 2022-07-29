@@ -1,3 +1,10 @@
+mat-toolbar-row {
+    justify-content: space-between;
+    background: black !important;
+    padding: 0px;
+    display: block;
+}
+
 .menu {
     display: flex;
     align-items: center;
@@ -24,6 +31,25 @@
 }
 
 .menuBar {
-    display: flex;
-    justify-content: flex-end;
+    display: none;
+    // display: flex;
+    // justify-content: flex-end;
+}
+
+
+@media (max-width: 650px) {
+    mat-toolbar-row {
+        display: flex;
+    }
+
+    .menuBar {
+        display: flex;
+    }
+
+    .menu {
+        .link {
+            display: none;
+        }
+    }
+
 }

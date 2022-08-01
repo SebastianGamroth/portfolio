@@ -29,10 +29,12 @@ button {
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
+    transition: all 125ms ease-in-out;
 
     &:hover {
         color: white;
         background-color: #2dfcd8;
+        transition: all 125ms ease-in-out;
     }
 }
 

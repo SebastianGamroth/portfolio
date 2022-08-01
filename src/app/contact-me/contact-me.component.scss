@@ -3,16 +3,55 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: black;
+    color: white;
+}
+
+.contactMeHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 h2 {
-    margin-top: 46px;
+    margin-top: 120px;
     font-size: 56px;
     color: #2dfcd8;
 }
 
 span {
+    margin-top: 20px;
+    margin-bottom: 46px;
     font-size: 16px;
     color: white;
 }
+
+mat-form-field {
+    width: 540px;
+}
+
+button {
+    color: #2dfcd8;
+    background-color: black;
+    border: 2px solid #2dfcd8;
+    height: 54px;
+    width: 140px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        background-color: #2dfcd8;
+    }
+}
+
+.example-button-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 120px;
+}
+
+// textarea {
+//     resize: none;
+// }

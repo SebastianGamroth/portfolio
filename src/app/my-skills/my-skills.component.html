@@ -2,15 +2,13 @@
     <h2>MY Skills</h2>
 
     <div class="mySkillsLink">
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle *ngFor="let i of mySkillsName; let indexNr = index;" value="bold">{{
-                mySkillsName[indexNr] }}
-                <mat-button-toggle class="mySkillsIcons">
-                    <img src="assets/img/{{ mySkillsPics[indexNr] }}.png">
-                </mat-button-toggle>
-            </mat-button-toggle>
-        </mat-button-toggle-group>
-    </div>
+        <div class="mySkillBox" *ngFor="let i of mySkillsName; let indexNr = index;">
+            {{ mySkillsName[indexNr] }}
+            <div class="mySkills">
+                <img src="assets/img/{{ mySkillsPics[indexNr] }}.png">
+            </div>
+        </div>
 
+    </div>
 
 </div>

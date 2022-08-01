@@ -22,11 +22,19 @@ mat-toolbar-row {
         margin-right: 110px;
 
         a {
+            font-weight: 400;
             color: white;
             text-decoration: none;
             font-size: 16px;
             margin-left: 60px;
+            transition: all 125ms ease-in-out;
+
+            &:hover {
+                color: #fa2759;
+                transition: all 125ms ease-in-out;
+            }
         }
+
     }
 }
 

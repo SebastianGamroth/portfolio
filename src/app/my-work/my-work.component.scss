@@ -35,15 +35,17 @@ h2 {
             }
         }
     }
+
+    .mat-button-toggle-checked {
+        background-color: #fa2759 !important;
+    }
+
+    .mat-button-toggle-appearance-standard {
+        background: black;
+    }
 }
 
-.mat-button-toggle-checked {
-    background-color: #fa2759 !important;
-}
 
-.mat-button-toggle-appearance-standard {
-    background: black;
-}
 
 .toggleWork {
     width: 800px;

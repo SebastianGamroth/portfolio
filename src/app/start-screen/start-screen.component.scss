@@ -65,6 +65,13 @@ img {
         height: 40px;
         cursor: pointer;
         margin: 0px;
+        transition: all 125ms ease-in-out;
+        background: white;
+
+        &:hover {
+            background: #fa2759;
+            transition: all 125ms ease-in-out;
+        }
     }
 }
 

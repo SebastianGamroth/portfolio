@@ -1,4 +1,18 @@
-section {
+.privacySection {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0px;
+}
+
+.privacyCenter {
     font-family: "Open Sans", sans-serif;
-    margin: 32px 16px;
+    padding: 60px 110px;
+}
+
+a {
+    color: #2dfcd8;
+
+    &:hover {
+        color: #fa2759;
+    }
 }

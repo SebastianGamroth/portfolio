@@ -30,6 +30,7 @@ h2 {
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 20px;
+    width: 625px;
 }
 
 .mySkills {
@@ -49,4 +50,18 @@ img {
     top: 0;
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 670px) {
+
+    .mySkillsLink {
+        width: 426px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .mySkillsLink {
+        width: 240px;
+    }
 }

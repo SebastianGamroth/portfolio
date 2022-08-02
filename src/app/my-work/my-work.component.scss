@@ -38,11 +38,15 @@ h2 {
 }
 
 .toggleWork {
+    width: 800px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
     mat-button-toggle-group {
         border: none;
         display: flex;
         flex-wrap: wrap;
-        width: 800px;
+        justify-content: center;
     }
 
     mat-button-toggle {
@@ -56,5 +60,12 @@ h2 {
     img {
         width: 370px;
         height: 320px;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .toggleWork {
+        width: 500px;
     }
 }

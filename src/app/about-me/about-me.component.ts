@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
+  image: any[] = [['walk-line'],['heart-line'],['search-line'],['flight-takeoff-line']];
+  description: any[] = [
+    ['Lorem, ipsum dolor sit amet consectetur adipisicing elit.'],
+    ['Lorem, ipsum dolor sit amet consectetur adipisicing elit.'],
+    ['Lorem, ipsum dolor sit amet consectetur adipisicing elit.'],
+    ['Lorem, ipsum dolor sit amet consectetur adipisicing elit.']
+  ];
 
   constructor() { }
 

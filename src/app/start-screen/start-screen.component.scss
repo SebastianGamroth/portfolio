@@ -2,10 +2,15 @@
     background-color: black;
     height: calc(100vh - 60px);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
 
     color: white;
+}
+
+.topContainer {
+    display: flex;
+    justify-content: space-between;
 }
 
 .mainTitle {
@@ -28,6 +33,7 @@ button {
     width: 270px;
     font-weight: 600;
     font-size: 16px;
+    margin-top: 80px;
     cursor: pointer;
     transition: all 125ms ease-in-out;
 
@@ -45,6 +51,21 @@ img {
     background-color: gray;
     border-radius: 50%;
     margin-right: 110px;
+}
+
+.scrollDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    margin-bottom: 10px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        margin: 0px;
+    }
 }
 
 @media (max-width: 1200px) {

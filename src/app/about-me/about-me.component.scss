@@ -6,8 +6,14 @@
     background-color: #1a1a1a;
 }
 
+.distance {
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
 .aboutMeHeader {
     display: flex;
+    align-items: center;
 
     img {
         margin-top: 80px;
@@ -15,7 +21,6 @@
         height: 200px;
         background-color: gray;
         border-radius: 50%;
-        margin-left: 110px;
     }
 
     h2 {
@@ -27,6 +32,47 @@
     p {
         font-size: 16px;
         color: white;
-        margin-right: 110px;
+    }
+}
+
+.description {
+    margin-left: 80px;
+    text-align: center;
+}
+
+.middleLine {
+    width: 100%;
+    border: 1px solid #2dfcd8;
+    margin-top: 30px;
+}
+
+.descriptionPoints {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+
+    .journey {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .imgCircle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: #2dfcd8;
+        border-radius: 50%;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
     }
 }

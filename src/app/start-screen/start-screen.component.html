@@ -1,20 +1,24 @@
 <div class="startScreen">
-    <div class="mainTitle">
-        <h1>Hi, <br> I'm <span style="color: #fa2759">Sebastian</span> Gamroth <br> Front End develop<span
-                style="color: #2dfcd8">e</span>r</h1>
+    <div class="topContainer">
+        <div class="mainTitle">
+            <h1>Hi, <br> I'm <span style="color: #fa2759">Sebastian</span> Gamroth <br> Front End develop<span
+                    style="color: #2dfcd8">e</span>r</h1>
 
-        <div class="example-button-row">
-            <a href="#contact-me"><button mat-stroked-button color="primary">Contact me</button></a>
+            <div class="example-button-row">
+                <a href="#contact-me"><button mat-stroked-button color="primary">Contact me</button></a>
+            </div>
+        </div>
+
+        <div class="avatar">
+            <img src="assets/img/profile.jpg">
         </div>
     </div>
 
-    <div class="avatar">
-        <img src="assets/img/profile.jpg">
-    </div>
+    <a href="#my-skills" class="scrollDown"><img src="assets/img/arrowDown.svg"></a>
 
 </div>
 
-<app-my-skills></app-my-skills>
+<app-my-skills id="my-skills"></app-my-skills>
 <app-my-work id="my-work"></app-my-work>
 <app-about-me id="about-me"></app-about-me>
 <app-contact-me id="contact-me"></app-contact-me>

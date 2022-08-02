@@ -2,16 +2,17 @@
     <h2>MY work</h2>
 
     <div class="toggleBtn">
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle (click)="myWork('0')">All</mat-button-toggle>
-            <mat-button-toggle (click)="myWork('1')">Angular</mat-button-toggle>
-            <mat-button-toggle (click)="myWork('2')">Java Script</mat-button-toggle>
+        <mat-button-toggle-group value="all" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="all" (click)="myWork('0')">All</mat-button-toggle>
+            <mat-button-toggle value="angular" (click)="myWork('1')">Angular</mat-button-toggle>
+            <mat-button-toggle value="JavaScript" (click)="myWork('2')">Java Script</mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 
     <div class="toggleWork">
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle *ngFor="let img of work[changeWork]"><img src="assets/img/{{ img }}.jpg"></mat-button-toggle>
+            <mat-button-toggle *ngFor="let img of work[changeWork]"><img src="assets/img/{{ img }}.png">
+            </mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 

@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-work.component.scss']
 })
 export class MyWorkComponent implements OnInit {
-  changeWork: number = 1;
-  work: any[] = [['myWork_all', 'myWork_all', 'myWork_all', 'myWork_all'],
-  ['myWork_angular', 'myWork_angular', 'myWork_angular', 'myWork_angular'],
-  ['myWork_javaScript', 'myWork_javaScript', 'myWork_javaScript', 'myWork_javaScript']];
+  changeWork: number = 0;
+
+  work: any[] = [['NB1', 'NB2', 'NB3', 'NB4'],
+  ['NB3', 'NB4', 'NB1', 'NB2'],
+  ['NB5', 'NB6', 'NB7', 'NB1']];
 
   constructor() { }
 

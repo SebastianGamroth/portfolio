@@ -5,14 +5,12 @@
         <div class="aboutMeHeader">
 
             <div class="avatar">
-                <img src="assets/img/profile.jpg">
+                <img src="assets/img/sebastian.jpg">
             </div>
 
             <div class="description">
                 <h2>About me.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quidem eum consequuntur? Dicta
-                    tempore
-                    ex corporis distinctio, ?</p>
+                <p>I'm a frontend developer with a passion for structuring logical processes.</p>
             </div>
 
         </div>
@@ -21,11 +19,12 @@
 
         <div class="descriptionPoints">
 
-            <div class="journey" *ngFor="let step of description; let indexNr = index;">
+            <div class="journey" *ngFor="let step of aboutMe; let indexNr = index;">
                 <div class="imgCircle">
-                    <img src="assets/img/{{ image[indexNr] }}.png">
+                    <img src="assets/img/{{ step.image }}.png">
                 </div>
-                <div class="text">{{ description[indexNr] }}</div>
+                <h3>{{ step.title }}</h3>
+                <p class="text">{{ step.description }}</p>
             </div>
 
         </div>

@@ -6,33 +6,35 @@
 
         <div class="contactMeHeader">
             <h2>Contact me.</h2>
-            <span>Get in touch via the form blow, or by emailing hello@gmail.com</span>
+            <span>Get in touch via the form blow, or by emailing user7w11@gmail.com</span>
         </div>
 
         <h3>Name</h3>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Enter your name</mat-label>
-            <input ngModel name="name" matInput required minlength="3">
+            <input ngModel #name name="name" matInput required minlength="3">
             <!-- <input [(ngModel)]="name" matInput required minlength="3"> -->
         </mat-form-field>
 
         <h3>Email address</h3>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Email</mat-label>
-            <input ngModel name="email" type="email" matInput placeholder="Ex. pat@example.com">
+            <input ngModel #email name="email" type="email" matInput placeholder="Ex. pat@example.com">
             <!-- [(ngModel)]="email" -->
         </mat-form-field>
 
         <h3>Message</h3>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Enter your message</mat-label>
-            <textarea ngModel name="message" matInput placeholder="Enter your message"></textarea>
+            <textarea ngModel #message name="message" matInput placeholder="Enter your message"></textarea>
             <!-- [(ngModel)]="message" -->
         </mat-form-field>
 
 
         <div class="example-button-row">
-            <button mat-stroked-button color="primary">Send</button><!--  (click)="sendMessage()" -->
+            <button mat-stroked-button (click)="name.value = '';email.value = '';message.value = ''"
+                color="primary">Send</button>
+            <!--  (click)="sendMessage()" -->
         </div>
 
     </form>

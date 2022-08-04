@@ -24,8 +24,4 @@ export class MyWorkComponent implements OnInit {
     this.changeWork = value;
   }
 
-  test(i) {
-    console.log('ok', i)
-  }
-
 }

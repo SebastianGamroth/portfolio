@@ -33,7 +33,6 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.aboutMe)
   }
 
 }

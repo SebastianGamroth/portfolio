@@ -1,5 +1,5 @@
 <div class="myWorkContainer">
-    <h2>MY work</h2>
+    <h2>MY work {{changeText}}</h2>
 
     <div class="toggleBtn">
         <mat-button-toggle-group value="all" name="fontStyle" aria-label="Font Style">
@@ -9,11 +9,31 @@
         </mat-button-toggle-group>
     </div>
 
-    <div class="toggleWork">
+    <!-- <div class="toggleWork">
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
             <mat-button-toggle *ngFor="let img of work[changeWork]"><img src="assets/img/{{ img }}.png">
             </mat-button-toggle>
         </mat-button-toggle-group>
+    </div> -->
+
+    <div class="toggleWork">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            
+            <div *ngFor="let img of work[changeWork]"><img src="assets/img/{{ img }}.png"
+                (mouseover)="changeText=true" (mouseleave)="changeText=false">
+
+                <div>
+                    <span *ngIf="!changeText"><img src="assets/img/logo.png"></span>
+                </div>
+            </div>
+
+
+
+        </mat-button-toggle-group>
     </div>
+    <!-- <div (mouseover)="changeText=true" (mouseout)="changeText=false">
+                    <span *ngIf="!changeText">Hide</span>
+                    <span *ngIf="changeText">Show</span>
+                </div> -->
 
 </div>

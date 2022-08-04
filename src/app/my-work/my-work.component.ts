@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyWorkComponent implements OnInit {
   changeWork: number = 0;
+  changeText: boolean;
 
   work: any[] = [['NB1', 'NB2', 'NB3', 'NB4'],
   ['NB3', 'NB4', 'NB1', 'NB2'],
   ['NB5', 'NB6', 'NB7', 'NB1']];
 
-  constructor() { }
+  constructor() {
+    this.changeText = false;
+  }
 
   ngOnInit(): void {
   }

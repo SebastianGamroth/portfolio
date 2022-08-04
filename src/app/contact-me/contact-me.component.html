@@ -1,8 +1,43 @@
 <div class="contactMeContainer">
 
-    <!-- onsubmit="checkFormValidation(); return false" -->
+    <form class="example-form" [formGroup]="getform">
 
-    <form class="example-form" #bsicForm="ngForm" (submit)="getDate(bsicForm.value)">
+        <div class="contactMeHeader">
+            <h2>Contact me.</h2>
+            <span>Get in touch via the form blow, or by emailing user7w11@gmail.com</span>
+        </div>
+
+        <h3>Name</h3>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter your name</mat-label>
+            <input matInput formControlName="name" type="text" class="form-control">
+            <small *ngIf="name.invalid && name.touched">Name is Required (minimum length 3)</small>
+        </mat-form-field>
+
+        <h3>Email address</h3>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="text" class="form-control" placeholder="Ex. pat@example.com">
+            <small *ngIf="email.invalid && email.touched">Email is Required</small>
+        </mat-form-field>
+
+        <h3>Message</h3>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter your message</mat-label>
+            <textarea matInput formControlName="message" type="text" cols="30" rows="5" class="form-control"
+                placeholder="Enter your message"></textarea>
+            <small *ngIf="getform.get('message').invalid && getform.get('message').touched">Message is Required (minimum
+                length 10)</small>
+        </mat-form-field>
+
+
+        <div class="example-button-row">
+            <button mat-stroked-button [disabled]="getform.invalid" (click)="clicksub()" color="primary">Send</button>
+        </div>
+
+    </form>
+
+    <!-- <form  class="example-form" #bsicForm="ngForm" (submit)="getDate(bsicForm.value)">
 
         <div class="contactMeHeader">
             <h2>Contact me.</h2>
@@ -13,30 +48,26 @@
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Enter your name</mat-label>
             <input ngModel #name name="name" matInput required minlength="3">
-            <!-- <input [(ngModel)]="name" matInput required minlength="3"> -->
         </mat-form-field>
 
         <h3>Email address</h3>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Email</mat-label>
-            <input ngModel #email name="email" type="email" matInput placeholder="Ex. pat@example.com">
-            <!-- [(ngModel)]="email" -->
+            <input ngModel #email name="email" type="email" matInput placeholder="Ex. pat@example.com" required>
         </mat-form-field>
 
         <h3>Message</h3>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Enter your message</mat-label>
-            <textarea ngModel #message name="message" matInput placeholder="Enter your message"></textarea>
-            <!-- [(ngModel)]="message" -->
+            <textarea ngModel #message name="message" matInput placeholder="Enter your message" required></textarea>
         </mat-form-field>
 
 
         <div class="example-button-row">
-            <button mat-stroked-button (click)="name.value = '';email.value = '';message.value = ''"
-                color="primary">Send</button>
-            <!--  (click)="sendMessage()" -->
+            <button mat-stroked-button defa (click)="name.value = '';email.value = '';message.value = ''"
+                color="primary" required>Send</button>
         </div>
 
-    </form>
+    </form> -->
 
 </div>

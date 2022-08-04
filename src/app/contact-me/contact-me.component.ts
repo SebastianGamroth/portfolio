@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from "@angular/forms";
+import { FormControl, FormGroup, NgForm, Validators } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -18,11 +18,18 @@ export class ContactMeComponent implements OnInit {
     'message': 'message',
   };
 
+  getform: FormGroup;
+
   constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
     this.endpoint = "https://sebastian-gamroth.developerakademie.net/portfolio/send_mail.php";
+    this.getform = new FormGroup({
+      'name': new FormControl(null, [Validators.required, Validators.minLength(3)]),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'message': new FormControl(null, [Validators.required, Validators.minLength(10)])
+    })
   }
 
   sendEmail() {
@@ -32,22 +39,30 @@ export class ContactMeComponent implements OnInit {
         response => console.log(response),
         response => console.log(response)
       )
-
+    console.log('ok')
 
   }
 
-  getDate(date: NgForm) {
-    this.postData = date;
+  // getDate(date: NgForm) {
+  //   this.postData = date;
+  //   this.sendEmail();
+  // }
+
+  clicksub() {
+    console.log(this.getform.value);
+
+    this.postData = this.getform.value;
     this.sendEmail();
+
+    this.getform.reset();
   }
 
-  // checkFormValidation() {
-  //   console.log('ok')
-  //   this.sendMessage();
-  // }
+  get name() {
+    return this.getform.get('name');
+  }
 
-  // sendMessage() {
-  //   console.warn(this.name, this.email, this.message)
-  // }
+  get email() {
+    return this.getform.get('email');
+  }
 
 }

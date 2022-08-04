@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     ToolbarComponent,
     CopyrightComponent,
     ImprintComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

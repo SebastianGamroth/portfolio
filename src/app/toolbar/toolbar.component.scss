@@ -40,9 +40,11 @@ mat-toolbar-row {
 
 .menuBar {
     display: none;
-    // display: flex;
-    // justify-content: flex-end;
 }
+
+a {
+    text-decoration: none;
+}   
 
 
 @media (max-width: 650px) {

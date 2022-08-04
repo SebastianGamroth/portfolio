@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SuccessComponent } from './success/success.component';
+import { WorkProjectComponent } from './work-project/work-project.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SuccessComponent } from './success/success.component';
     CopyrightComponent,
     ImprintComponent,
     PrivacyComponent,
-    SuccessComponent
+    SuccessComponent,
+    WorkProjectComponent
   ],
   imports: [
     BrowserModule,

@@ -18,14 +18,16 @@
 
     <div class="toggleWork">
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            
-            <div *ngFor="let img of work[changeWork]"><img src="assets/img/{{ img }}.png"
-                (mouseover)="changeText=true" (mouseleave)="changeText=false">
 
-                <div>
-                    <span *ngIf="!changeText"><img src="assets/img/logo.png"></span>
+            <div class="workPosition" *ngFor="let img of work[changeWork]; let i=index">
+                <img src="assets/img/{{ img }}.png">
+
+                <div class="projectBtn">
+                    <a href="#"><button mat-stroked-button color="primary">Try it</button></a>
                 </div>
+
             </div>
+
 
 
 

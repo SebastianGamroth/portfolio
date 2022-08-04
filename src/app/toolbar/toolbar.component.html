@@ -15,8 +15,9 @@
     <div class="menuBar">
       <button mat-button [matMenuTriggerFor]="menu"><img src="assets/img/menu_black_24dp.svg"></button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+        <a href="#home"><button mat-menu-item>HOME</button></a>
+        <a href="#about-me"><button mat-menu-item>ABOUT</button></a>
+        <a href="#my-work"><button mat-menu-item>PORTFOLIO</button></a>
       </mat-menu>
     </div>
 

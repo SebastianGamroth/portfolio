@@ -60,6 +60,7 @@ h2 {
     }
 
     mat-button-toggle {
+        position: relative;
         background: none;
         border: none;
         margin: 6px;
@@ -70,10 +71,52 @@ h2 {
     img {
         width: 370px;
         height: 320px;
+
+
     }
 }
 
-span{
+.workPosition {
+    position: relative;
+    margin: 8px;
+}
+
+.projectBtn {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    top: 0px;
+    left: 0px;
+    right: 10px;
+    bottom: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        transition: all 125ms ease-in-out;
+    }
+
+    button {
+        color: #2dfcd8;
+        background-color: black;
+        border: 2px solid #2dfcd8;
+        height: 54px;
+        width: 140px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+            background-color: #2dfcd8;
+        }
+    }
+}
+
+span {
     z-index: 1;
 }
 

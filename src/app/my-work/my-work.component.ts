@@ -15,10 +15,10 @@ export class MyWorkComponent implements OnInit {
       'path': 'https://sebastian-gamroth.developerakademie.net/portfolio/'
     },
     {
-      'img': 'NB4',
+      'img': 'NB5',
       'name': 'Angular',
-      'description': 'CRM-app based on Angular and Material Design',
-      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+      'description': 'Ring-Of-Fire based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/ringoffire/'
     },
     {
       'img': 'NB1',
@@ -33,10 +33,10 @@ export class MyWorkComponent implements OnInit {
       'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
     },
     {
-      'img': 'NB5',
+      'img': 'NB4',
       'name': 'JavaScript',
-      'description': 'Ring-Of-Fire based on Java Script',
-      'path': 'https://sebastian-gamroth.developerakademie.net/ringoffire/'
+      'description': 'CRM-app based on Java Script',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
     },
     {
       'img': 'NB6',

@@ -9,19 +9,12 @@
         </mat-button-toggle-group>
     </div>
 
-    <!-- <div class="toggleWork">
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle *ngFor="let img of work[changeWork]"><img src="assets/img/{{ img }}.png">
-            </mat-button-toggle>
-        </mat-button-toggle-group>
-    </div> -->
-
     <div class="toggleWork">
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
 
             <div class="workPosition" *ngFor="let workBox of projectContainer; let i=index">
                 <img src="assets/img/{{ workBox.img }}.jpg">
-                <h4 class="projectName">{{ workBox.name }}</h4>
+                <h4 class="projectName">{{ workBox.name }} {{ workBox.description.split(' ')[0] }}</h4>
 
                 <div class="projectBtn">
                     <div>
@@ -33,12 +26,7 @@
 
             </div>
 
-
         </mat-button-toggle-group>
     </div>
-    <!-- <div (mouseover)="changeText=true" (mouseout)="changeText=false">
-                    <span *ngIf="!changeText">Hide</span>
-                    <span *ngIf="changeText">Show</span>
-                </div> -->
 
 </div>

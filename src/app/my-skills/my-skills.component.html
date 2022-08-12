@@ -2,10 +2,10 @@
     <h2>MY Skills</h2>
 
     <div class="mySkillsLink">
-        <div class="mySkillBox" *ngFor="let i of mySkillsName; let indexNr = index;">
-            {{ mySkillsName[indexNr] }}
+        <div class="mySkillBox" *ngFor="let skill of mySkillsJSON;">
+            {{ skill.name }}
             <div class="mySkills">
-                <img src="assets/img/{{ mySkillsPics[indexNr] }}.png">
+                <img src="assets/img/{{ skill.pic }}.png">
             </div>
         </div>
 

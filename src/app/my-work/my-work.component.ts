@@ -6,15 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-work.component.scss']
 })
 export class MyWorkComponent implements OnInit {
-  // changeWork: number = 0;
-  // changeText: boolean;
 
   projectJSON: any[] = [
     {
       'img': 'NB3',
       'name': 'Angular',
-      'description': 'CRM-app based on Angular and Material Design',
-      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+      'description': 'Portfolio based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/portfolio/'
     },
     {
       'img': 'NB4',
@@ -25,7 +23,7 @@ export class MyWorkComponent implements OnInit {
     {
       'img': 'NB1',
       'name': 'Angular',
-      'description': 'Simple CRM based on Angular and Material Design',
+      'description': 'Simple-CRM based on Angular and Material Design',
       'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
     },
     {
@@ -37,42 +35,39 @@ export class MyWorkComponent implements OnInit {
     {
       'img': 'NB5',
       'name': 'JavaScript',
-      'description': 'CRM-app based on Angular and Material Design',
-      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+      'description': 'Ring-Of-Fire based on Java Script',
+      'path': 'https://sebastian-gamroth.developerakademie.net/ringoffire/'
     },
     {
       'img': 'NB6',
       'name': 'JavaScript',
-      'description': 'CRM-app based on Angular and Material Design',
-      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+      'description': 'Kanban based on Java Script',
+      'path': 'https://sebastian-gamroth.developerakademie.net/Kanban/index.html'
     },
     {
       'img': 'NB7',
       'name': 'JavaScript',
-      'description': 'CRM-app based on Angular and Material Design',
-      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+      'description': 'Pokedex based on Java Script',
+      'path': 'https://sebastian-gamroth.developerakademie.net/Pokedex/index.html'
     },
     {
-      'img': 'NB1',
+      'img': 'NB4',
       'name': 'JavaScript',
-      'description': 'CRM-app based on Angular and Material Design',
-      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+      'description': 'ElPolloLoco based on Java Script',
+      'path': 'https://sebastian-gamroth.developerakademie.net/ElPolloLoco/index.html'
     }
   ]
-
   projectContainer: any;
 
-  constructor() {
-    // this.changeText = false;
-  }
+  constructor() { }
+
 
   ngOnInit(): void {
     this.myWork('All');
   }
 
-  myWork(value: string) {
-    // this.changeWork = value;
 
+  myWork(value: string) {
     let change = this.projectJSON.filter(t => t['name'] == value);
     this.projectContainer = change;
 

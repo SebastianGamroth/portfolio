@@ -6,22 +6,79 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-work.component.scss']
 })
 export class MyWorkComponent implements OnInit {
-  changeWork: number = 0;
-  changeText: boolean;
+  // changeWork: number = 0;
+  // changeText: boolean;
 
-  work: any[] = [['NB1', 'NB2', 'NB3', 'NB4'],
-  ['NB3', 'NB4', 'NB1', 'NB2'],
-  ['NB5', 'NB6', 'NB7', 'NB1']];
+  projectJSON: any[] = [
+    {
+      'img': 'NB3',
+      'name': 'Angular',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB4',
+      'name': 'Angular',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB1',
+      'name': 'Angular',
+      'description': 'Simple CRM based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB4',
+      'name': 'Angular',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB5',
+      'name': 'JavaScript',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB6',
+      'name': 'JavaScript',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB7',
+      'name': 'JavaScript',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    },
+    {
+      'img': 'NB1',
+      'name': 'JavaScript',
+      'description': 'CRM-app based on Angular and Material Design',
+      'path': 'https://sebastian-gamroth.developerakademie.net/simple-crm/'
+    }
+  ]
+
+  projectContainer: any;
 
   constructor() {
-    this.changeText = false;
+    // this.changeText = false;
   }
 
   ngOnInit(): void {
+    this.myWork('All');
   }
 
-  myWork(value) {
-    this.changeWork = value;
+  myWork(value: string) {
+    // this.changeWork = value;
+
+    let change = this.projectJSON.filter(t => t['name'] == value);
+    this.projectContainer = change;
+
+    if (value == 'All') {
+      this.projectContainer = this.projectJSON;
+    }
   }
 
 }

@@ -3,9 +3,9 @@
 
     <div class="toggleBtn">
         <mat-button-toggle-group value="all" name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle value="all" (click)="myWork('0')">All</mat-button-toggle>
-            <mat-button-toggle value="angular" (click)="myWork('1')">Angular</mat-button-toggle>
-            <mat-button-toggle value="JavaScript" (click)="myWork('2')">Java Script</mat-button-toggle>
+            <mat-button-toggle value="all" (click)="myWork('All')">All</mat-button-toggle>
+            <mat-button-toggle value="angular" (click)="myWork('Angular')">Angular</mat-button-toggle>
+            <mat-button-toggle value="JavaScript" (click)="myWork('JavaScript')">Java Script</mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 
@@ -19,16 +19,19 @@
     <div class="toggleWork">
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
 
-            <div class="workPosition" *ngFor="let img of work[changeWork]; let i=index">
-                <img src="assets/img/{{ img }}.png">
+            <div class="workPosition" *ngFor="let workBox of projectContainer; let i=index">
+                <img src="assets/img/{{ workBox.img }}.jpg">
+                <h4 class="projectName">{{ workBox.name }}</h4>
 
                 <div class="projectBtn">
-                    <a href="#"><button mat-stroked-button color="primary">Try it</button></a>
+                    <div>
+                        <h2>{{ workBox.description }}</h2>
+                        <a target="_blank" href="{{ workBox.path }}"><button mat-stroked-button color="primary">Try
+                                it</button></a>
+                    </div>
                 </div>
 
             </div>
-
-
 
 
         </mat-button-toggle-group>

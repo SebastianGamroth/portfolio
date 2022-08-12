@@ -81,6 +81,17 @@ h2 {
     margin: 8px;
 }
 
+.projectName {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 2px;
+    left: 8px;
+    color: #fa2759;
+    font-weight: 600;
+}
+
 .projectBtn {
     position: absolute;
     display: flex;
@@ -97,6 +108,23 @@ h2 {
     &:hover {
         opacity: 1;
         transition: all 125ms ease-in-out;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    h2 {
+        font-size: 16px;
+        color: #fa2759;
+    }
+
+    a {
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
     }
 
     button {

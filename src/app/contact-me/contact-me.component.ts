@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm, Validators } from "@angular/forms";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -33,7 +33,6 @@ export class ContactMeComponent implements OnInit {
   }
 
   sendEmail() {
-    //You may also want to check the response. But again,   let's keep it simple.
     this.http.post(this.endpoint, this.postData)
       .subscribe(
         response => console.log(response),
@@ -42,11 +41,6 @@ export class ContactMeComponent implements OnInit {
     console.log('ok')
 
   }
-
-  // getDate(date: NgForm) {
-  //   this.postData = date;
-  //   this.sendEmail();
-  // }
 
   clicksub() {
     console.log(this.getform.value);

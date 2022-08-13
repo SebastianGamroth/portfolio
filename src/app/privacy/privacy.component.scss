@@ -16,3 +16,9 @@ a {
         color: #fa2759;
     }
 }
+
+@media (max-width: 700px) {
+    .privacyCenter {
+        padding: 60px 16px;
+    }
+}

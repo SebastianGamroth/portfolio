@@ -13,6 +13,11 @@
     justify-content: flex-start;
 }
 
+.example-form {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 h2 {
     margin-top: 120px;
     font-size: 56px;
@@ -27,7 +32,8 @@ span {
 }
 
 mat-form-field {
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
 }
 
 button {

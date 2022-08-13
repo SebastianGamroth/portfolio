@@ -12,12 +12,6 @@ mat-toolbar-row {
     background-color: black;
     height: 60px;
 
-    img {
-        width: 40px;
-        height: 40px;
-        margin-left: 110px;
-    }
-
     .link {
         margin-right: 110px;
 
@@ -38,13 +32,19 @@ mat-toolbar-row {
     }
 }
 
+.logoImg {
+    width: 40px;
+    height: 40px;
+    margin-left: 110px;
+}
+
 .menuBar {
     display: none;
 }
 
 a {
     text-decoration: none;
-}   
+}
 
 
 @media (max-width: 650px) {
@@ -54,12 +54,18 @@ a {
 
     .menuBar {
         display: flex;
+        margin-right: 16px;
     }
 
     .menu {
         .link {
             display: none;
         }
+
+    }
+
+    .logoImg {
+        margin-left: 16px;
     }
 
 }

@@ -44,11 +44,12 @@ button {
     width: 140px;
     font-weight: 600;
     font-size: 16px;
-    cursor: pointer;
+    cursor: default;
 
-    &:hover {
+    &:not([disabled]):hover {
         color: white;
         background-color: #2dfcd8;
+        cursor: pointer;
     }
 }
 

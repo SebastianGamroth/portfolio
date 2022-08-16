@@ -22,7 +22,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers = "From: $name <$email>";
 
 	$recipient = 'user7w11@gmail.com';
-	$redirect = 'success';
+	$redirect = 'success.html';
 
         mail($recipient, $subject, $message, $headers);
         header("Location: " . $redirect); 

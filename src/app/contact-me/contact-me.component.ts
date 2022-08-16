@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessComponent } from '../success/success.component';
 
 @Component({
   selector: 'app-contact-me',
@@ -8,9 +10,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
-  // name: string;
-  // email: string;
-  // message: string;
   endpoint: string;
   postData: any = {
     'name': 'name',
@@ -20,7 +19,7 @@ export class ContactMeComponent implements OnInit {
 
   getform: FormGroup;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -38,13 +37,10 @@ export class ContactMeComponent implements OnInit {
         response => console.log(response),
         response => console.log(response)
       )
-    console.log('ok')
-
+    this.openDialogSuccess();
   }
 
   clicksub() {
-    console.log(this.getform.value);
-
     this.postData = this.getform.value;
     this.sendEmail();
 
@@ -57,6 +53,12 @@ export class ContactMeComponent implements OnInit {
 
   get email() {
     return this.getform.get('email');
+  }
+
+  openDialogSuccess() {
+    this.dialog.open(SuccessComponent, {
+      data: { name: this.postData.name }
+    });
   }
 
 }

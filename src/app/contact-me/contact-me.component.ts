@@ -40,6 +40,13 @@ export class ContactMeComponent implements OnInit {
     this.openDialogSuccess();
   }
 
+  onSubmit(): void {
+    if (this.getform.invalid) {
+      return;
+    }
+    this.clicksub();
+  }
+
   clicksub() {
     this.postData = this.getform.value;
     this.sendEmail();

@@ -1,6 +1,6 @@
 <div class="contactMeContainer">
 
-    <form class="example-form" [formGroup]="getform">
+    <form class="example-form" [formGroup]="getform" (ngSubmit)="onSubmit()">
 
         <div class="contactMeHeader">
             <h2>Contact me.</h2>
@@ -32,7 +32,7 @@
 
 
         <div class="example-button-row">
-            <button mat-stroked-button [disabled]="getform.invalid" (click)="clicksub()" color="primary">Send</button>
+            <button mat-stroked-button  type="submit" color="primary">Send</button>
         </div>
 
     </form>
